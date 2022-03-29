@@ -285,5 +285,7 @@ class MarineLang:
 
 if __name__ == "__main__":
     compiler = MarineLang()
-    compiler.compile_file("main.mcl")
-    #compiler.compile_file(sys.argv[2])
+    if (len(sys.argv) == 2):
+        compiler.compile_file(sys.argv[2])
+    else:
+        compiler.compile_file("main.mcl")
